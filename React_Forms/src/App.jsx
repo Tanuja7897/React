@@ -4,9 +4,7 @@ function App() {
   const [data , setData] = useState({email:"", password:""});
   
   function formsubmit(e){
-    //react single page application h and form tag ek br input leke ke bd update ho jata h
-    //usko prevent krne ke liye ki rerender ho but update or reload n ho/
-    //hmne prevent default kr diya
+    
       e.preventDefault();
       console.log({ email:data.email,password:data.password})
   }
@@ -33,7 +31,7 @@ function App() {
             onChange={handleForm} className="bg-gray h-9 w-56 focus:outline-none border-button-border border-1 rounded-md"
             />
           <button>Log in</button>
-          {/* onclick read only hota h isliye yha onchange use krenge */}
+         
           <input 
             name="password"
             type="password"
