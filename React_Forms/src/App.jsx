@@ -12,7 +12,7 @@ function App() {
   }
   function handleForm(event){
     const {name,value} = event.target
-      setData((prevData) =>({
+      setData((prevData) =>({ 
         ...prevData,
         [name]:value,
       }));
