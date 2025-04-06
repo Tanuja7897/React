@@ -43,7 +43,7 @@ function App() {
   return(
       <div className="bg-black min-h-screen w-screen">
         <div className="div flex flex-col items-center">
-          <h1 className='text-amber-200 italic text-2xl'>Add Your ToDos </h1>
+          <h1 className='text-amber-200 italic text-2xl'>Add Your ToDos below</h1>
           <input type="text" placeholder='Enter your toDo name' onChange={(e)=> setData((preVal)=>({...preVal,title:e.target.value}))} className='border border-black border-2 w-1/5 m-6 shadow-xl/30 bg-teal-100'/>
           <input type="text" placeholder='Add description' onChange={(e)=> setData((preVal)=>({...preVal,desc:e.target.value}))} className='border border-black border-2 w-1/5 mt-1 ml-6 shadow-xl/30 bg-teal-100'/>
           <button onClick={AddCart} className='bg bg-blue-500 w-1/10 rounded-lg h-10 mt-1 ml-6 shadow-lg shadow-blue-500/50'>Add ToDo</button>
