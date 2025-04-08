@@ -5,7 +5,7 @@ import './App.css'
 
 function App() {
   //Reason to make todoHook jb hm data ek hook se dusre hook me assign kr rhe h taki array hi maintained rhe kyoki inpit se obj a rha h and jb input me value set kr rhe h to array obj me convert ho rha h
-  let [todoData , setTodoData] = useState([]);
+  let [todoData ,setTodoData] = useState([]);
   let [data , setData] = useState({title:"",desc:""});
   function AddCart(){
     if(!data.title || !data.desc){
@@ -16,7 +16,7 @@ function App() {
     setTodoData([...todoData,data]); //for sync of input and useState hook..hmne useState hook k wait nhi kiya khud se hi update kr diya
     saveLocal([...todoData,data]);//ab ye browser pe data storage h
   }
-  //now browser se data fetch krna h  ...kevl 1 hi br fetch krna h
+  //now browser se data fetch krna h  ...kevl 1 hi br fetch krna h so that's why empty list
   function getDataFromBrowser(){
     let browserData = JSON.parse(localStorage.getItem("todos")) || []; //todo is key jisse hmara pura data store h  ..and oroperator ..starting me data is null to uspe map nhi chlega isiliye isiliye agr null hai to empty Array[] bhej rhe h
     setTodoData(browserData);
